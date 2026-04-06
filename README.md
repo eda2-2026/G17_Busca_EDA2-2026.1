@@ -64,4 +64,8 @@ Com a compilação concluída com sucesso:
 | <img src="docs/assets/fotos/Sua_foto_GitHub.png" width="120px;" alt="Cayo Alencar"/><br />**Cayo Alencar** | 
 | :---: | 
 | Matrícula: **Insira_sua_matricula_aqui** | 
-| <img src="https://github.com/SeuUserGithub.png" width="16px;"/> [`@SeuUserGithub`](https://github.com/SeuUserGithub) | 
+| <img src="https://github.com/SeuUserGithub.png" width="16px;"/> [`@SeuUserGithub`](https://github.com/SeuUserGithub) |
+| <img src="docs/assets/fotos/dcasseb.png" width="120px;" alt="Davi Casseb"/><br />**Davi Casseb** | 
+| :---: | 
+| Matrícula: **211031682** | 
+| <img src="https://github.com/dcasseb.png" width="16px;"/> [`@dcasseb`](https://github.com/dcasseb) |
