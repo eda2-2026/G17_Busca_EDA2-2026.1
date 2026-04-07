@@ -1,71 +1,83 @@
-# Lista de Tarefas Inteligente - EDA
+# Lista-de-Tarefas-Inteligente
 
-## Objetivo do Projeto
-O objetivo deste projeto é implementar um sistema gerenciador de tarefas diárias (focado em acompanhamento de atividades). O cerne técnico do sistema é a aplicação de uma lista simplesmente encadeada em Linguagem C, utilizando um algoritmo de busca sequencial otimizado com a heurística **Mover-Para-Frente** (Move-to-Front).
+Número da Lista: X
+Conteúdo da Disciplina: Estrutura de Dados
 
-## Características dos Dados e Arquitetura
+## Alunos
 
-* **Estrutura de Dados em C:** Os itens são armazenados dinamicamente em uma `struct Tarefa`, contendo um identificador único (`id` numérico), uma string com a `descricao` e um ponteiro para o próximo nó.
-* **Heurística Mover-Para-Frente:** Ao realizar uma busca bem-sucedida pelo ID, o nó correspondente é desvinculado de sua posição atual no meio/fim da lista e realocado para o topo (passando a ser o `head`). Essa política garante que os itens mais acessados fiquem no início, com um custo de acesso futuro que se aproxima de O(1).
-* **Camadas Isoladas:** O projeto mantém e separa firmemente regras de negócio (`tarefas.c` e `tarefas.h`) das funções e telas iterativas em terminal (`main.c`).
+| Matrícula | Aluno        |
+| --------- | ------------ |
+| 211031682 | Davi Casseb  |
+| 221022506  | Cayo Alencar |
 
-## Divisão de Responsabilidades
+## Sobre
 
-O desenvolvimento desta estrutura funcional se divide fundamentalmente nas seguintes frentes (adaptáveis na sua documentação):
+Este projeto implementa um sistema de gerenciamento de tarefas diárias utilizando uma lista simplesmente encadeada em linguagem C.
 
-### Estrutura de Dados e Lógica
-* Manuseio da fila dinâmica e alocação (`malloc`/`free`).
-* Adição (`inserir_tarefa`) ao final da lista.
-* Algoritmo complexo que recria vínculos `anterior->prox = atual->prox` para mover os nós em tempo de execução sem corromper memória.
+O principal objetivo é demonstrar o uso de **busca sequencial otimizada** com a heurística **Move-to-Front (Mover para Frente)**. Sempre que uma tarefa é encontrada, ela é movida para o início da lista, tornando acessos futuros mais rápidos.
 
-### Interface em Terminal (UI)
-* Confecção visual da "Tela Principal".
-* Fluxo de navegação validada das telas de Inserção, Busca e Listagem.
-* Proteção contra lixo de memória na entrada de dados via `scanf`. 
+Funcionalidades:
 
-### Responsabilidade Compartilhada
-* Integração limpa e modular através do arquivo `Makefile`, juntando o cabeçalho compartilhado para execução performática.
+* Inserção de tarefas
+* Busca por ID
+* Listagem de tarefas
+* Otimização dinâmica baseada em frequência de acesso
 
-## 💻 Como Executar
+## Screenshots
 
-O projeto é mantido modularizado e utiliza rotinas de compilação automáticas (`make`).
+<img src="docs/assets/capturas%20de%20tela/screenshot_1.png" width="300"/> 
+<img src="docs/assets/capturas%20de%20tela/screenshot_2.png" width="300"/> 
+<img src="docs/assets/capturas%20de%20tela/screenshot_3.png" width="300"/>
 
-### ⚙️ 1. Compilando os Arquivos 
-Para gerar o executável final ligando a *main* à biblioteca de funções da lista, é necessário que o GCC esteja instalado no sistema.
+## Instalação
 
-No terminal Unix/Linux, dentro da pasta raiz:
+Linguagem: C
+Framework: Não possui
 
-1. Acesse o diretório:
-   `cd /home/cayoalencar/Documentos/eda2/G17_Busca_Eda2-2026.1`
-2. Dispare o compilador com as flag patterns:
-   `make`
+Pré-requisitos:
 
-*(O Makefile lidará com a compilação gerando o binário executável local "tarefas")*
+* GCC instalado
+* Sistema Linux/Unix ou compatível (WSL, MSYS2, etc.)
 
-### 🚀 2. Executando o Motor da Lista
-Com a compilação concluída com sucesso:
+Comandos para compilar:
 
-1. Na mesma pasta, execute o gerenciador de tarefas:
-   `./tarefas`
-2. Teste todo o fluxo! Adicione duas tarefas e interaja com a **Opção 2 - Busca**. Ao visualizar a lista logo após (Opção 3), o nó pesquisado terá saltado automaticamente para a cabeça da fila.
+```bash
+make
+```
 
-## 🎥 Demonstração Visual
+## Uso
 
-**Assista ao nosso vídeo explicativo no YouTube:**  
-*(Mude para o link do seu vídeo na entrega acadêmica)*
-[![Vídeo de Demonstração](https://img.youtube.com/vi/LINK_DO_SEU_VIDEO_AQUI/maxresdefault.jpg)](https://youtu.be/LINK_DO_SEU_VIDEO_AQUI)
+Após a compilação, execute:
 
-### Capturas de Tela do Sistema
-*(Subsitua pelos arquivos de print de tela rodando no terminal Linux)*
-<img src="docs/assets/capturas%20de%20tela/screenshot_1.png" width="300"/> <img src="docs/assets/capturas%20de%20tela/screenshot_2.png" width="300"/> <img src="docs/assets/capturas%20de%20tela/screenshot_3.png" width="300"/>
+```bash
+./tarefas
+```
 
-## Equipe de Desenvolvimento
+Fluxo básico de uso:
 
-| <img src="docs/assets/fotos/Sua_foto_GitHub.png" width="120px;" alt="Cayo Alencar"/><br />**Cayo Alencar** | 
-| :---: | 
-| Matrícula: **Insira_sua_matricula_aqui** | 
-| <img src="https://github.com/SeuUserGithub.png" width="16px;"/> [`@SeuUserGithub`](https://github.com/SeuUserGithub) |
-| <img src="docs/assets/fotos/dcasseb.png" width="120px;" alt="Davi Casseb"/><br />**Davi Casseb** | 
-| :---: | 
-| Matrícula: **211031682** | 
-| <img src="https://github.com/dcasseb.png" width="16px;"/> [`@dcasseb`](https://github.com/dcasseb) |
+1. Inserir tarefas pelo menu
+2. Buscar tarefas pelo ID (ativa o Move-to-Front)
+3. Listar tarefas para observar a reorganização da lista
+
+## Outros
+
+### Arquitetura do Projeto
+
+* `tarefas.c / tarefas.h`: implementação da lista encadeada e regras de negócio
+* `main.c`: interface de interação via terminal
+* `Makefile`: automação da compilação
+
+### Destaque Técnico
+
+* Estrutura de dados dinâmica com alocação via `malloc`/`free`
+* Implementação de **lista auto-organizável (self-organizing list)**
+* Otimização de busca com heurística adaptativa
+
+### Complexidade
+
+* Busca padrão: O(n)
+* Com otimização (uso frequente): tende a O(1)
+
+### Demonstração
+
+https://youtu.be/LINK_DO_SEU_VIDEO_AQUI
