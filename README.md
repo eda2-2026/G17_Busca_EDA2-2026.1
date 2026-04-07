@@ -81,4 +81,3 @@ Fluxo básico de uso:
 ### Demonstração
 
 [Link do vídeo no YouTube](https://youtu.be/NanyavoOf8o)
-[!(https://img.youtube.com/vi/NanyavoOf8o/default.jpg)]
