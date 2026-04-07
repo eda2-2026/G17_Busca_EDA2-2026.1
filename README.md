@@ -1,7 +1,7 @@
 # Lista-de-Tarefas-Inteligente
 
-Número da Lista: X
-Conteúdo da Disciplina: Estrutura de Dados
+Número da Lista: 17
+Conteúdo da Disciplina: Estrutura de Dados 2
 
 ## Alunos
 
